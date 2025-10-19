@@ -230,12 +230,14 @@ export default function RandomChatApp() {
       return;
     }
     
-    console.log('[PEER] Initializing PeerJS...');
-    const peer = new window.Peer({
-      host: '0.peerjs.com',
-      secure: true,
+    console.log('[PEER] Initializing PeerJS (custom server)...');
+    // Use custom PeerServer running on localhost:9000 with path /peerjs
+    const peer = new window.Peer(undefined, {
+      host: 'peerjs-server-3z7d.onrender.com',
       port: 443,
-      path: '/',
+      path: '/peerjs',
+      secure: true,
+      debug : 2,
       config: {
         iceServers: [
           { urls: 'stun:stun.l.google.com:19302' },
