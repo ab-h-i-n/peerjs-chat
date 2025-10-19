@@ -548,7 +548,7 @@ export default function RandomChatApp() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-0 sm:p-4">
+    <div className="min-h-[100dvh] bg-gray-900 flex items-center justify-center p-0 sm:p-4">
       <div className="bg-gray-800 w-full max-w-2xl h-screen sm:h-[600px] flex flex-col sm:rounded-lg shadow-2xl">
         {/* WhatsApp-like Header */}
         <div className="bg-gray-900 text-white px-4 py-3 flex items-center justify-between">
